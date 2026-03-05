@@ -1,0 +1,106 @@
+# ============================================
+# LAB WEBSITE CONFIGURATION
+# Edit this file to customize your lab website
+# ============================================
+
+# Site Settings
+name: "AgroSystems Lab"
+description: "Exploring sustainable agriculture through systems thinking and innovative research"
+url: "https://your-lab.github.io"
+baseurl: ""
+
+# Lab Information
+lab:
+  name: "AgroSystems Lab"
+  tagline: "Where Agriculture Meets Innovation"
+  department: "Department of Crop Science"
+  university: "University Name"
+  location: "City, Country"
+  founded: 2018
+  
+# Contact Information
+contact:
+  email: "lab@university.edu"
+  phone: "+1 (555) 123-4567"
+  address: |
+    Building Name, Room 123
+    123 University Avenue
+    City, ST 12345
+  map_link: "https://maps.google.com/..."
+  
+# Social Links
+social:
+  twitter: "https://twitter.com/labhandle"
+  github: "https://github.com/laborg"
+  linkedin: "https://linkedin.com/company/lab"
+  bluesky: "https://bsky.app/profile/lab.bsky.social"
+  
+# Navigation
+navigation:
+  - title: "Research"
+    url: "/research/"
+  - title: "People"
+    url: "/people/"
+  - title: "Publications"
+    url: "/publications/"
+  - title: "News"
+    url: "/news/"
+  - title: "Contact"
+    url: "/contact/"
+
+# Theme Colors (CSS custom properties will use these)
+colors:
+  primary: "#2563eb"      # Blue
+  secondary: "#059669"    # Green
+  accent: "#dc2626"       # Red
+  dark: "#1f2937"         # Dark gray
+  light: "#f9fafb"        # Light gray
+
+# Collections
+collections:
+  people:
+    output: true
+    permalink: /people/:name/
+  publications:
+    output: false
+  research:
+    output: true
+    permalink: /research/:name/
+  news:
+    output: true
+    permalink: /news/:title/
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "people"
+    values:
+      layout: "person"
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: "research"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - LICENSE
