@@ -1,174 +1,147 @@
 ---
 layout: default
-title: Home
+title: CARISMA
 ---
 
-<!-- Hero Section -->
-<section class="hero" markdown="0">
-  <div class="hero-content">
-    <span class="hero-tag">{{ site.lab.department }}</span>
-    <h1 class="hero-title">{{ site.lab.name }}</h1>
-    <p class="hero-subtitle">{{ site.lab.tagline }}</p>
-    <div class="hero-description">
-      {% for paragraph in site.lab.overview.intro %}
-      <p>{{ paragraph }}</p>
-      {% endfor %}
-    </div>
-    <div class="hero-highlights">
-      <div class="hero-panel">
-        <h2 class="hero-panel-title">Main Objectives</h2>
-        <ul class="hero-list">
-          {% for item in site.lab.overview.objectives %}
-          <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="hero-panel">
-        <h2 class="hero-panel-title">Main Research Activities</h2>
-        <ul class="hero-list">
-          {% for item in site.lab.overview.activities %}
-          <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-    <div class="hero-actions">
-      <a href="{{ '/research/' | relative_url }}" class="btn btn-primary">Explore Our Research</a>
-      <a href="{{ '/contact/' | relative_url }}" class="btn btn-secondary">Get in Touch</a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-image-placeholder">
-      <!-- Add your hero image to assets/images/hero.jpg -->
-      <span>🌱</span>
+<section class="centre-hero" markdown="0">
+  <div class="container centre-hero-shell">
+    <div class="centre-hero-main">
+      <p class="centre-kicker">Research Centre</p>
+      <h1 class="centre-title">{{ site.lab.full_name }}</h1>
+      <p class="centre-acronym">{{ site.lab.name }}</p>
+      <p class="centre-summary">{{ site.lab.tagline }}</p>
+      <dl class="centre-meta">
+        <div class="centre-meta-item">
+          <dt>Head</dt>
+          <dd>{{ site.lab.head }}</dd>
+        </div>
+        <div class="centre-meta-item">
+          <dt>Institution</dt>
+          <dd>{{ site.lab.university }}</dd>
+        </div>
+        <div class="centre-meta-item">
+          <dt>Contact</dt>
+          <dd><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></dd>
+        </div>
+        <div class="centre-meta-item">
+          <dt>Phone</dt>
+          <dd>{{ site.contact.phone }}</dd>
+        </div>
+      </dl>
+      <figure class="centre-image-frame">
+        <img src="{{ '/assets/img/grp.png' | relative_url }}" alt="CARISMA group" class="centre-image">
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- Research Highlights -->
-<section class="section section-research" markdown="0">
-  <div class="container">
-    <header class="section-header">
-      <span class="section-tag">Research Areas</span>
-      <h2 class="section-title">What We Do</h2>
-      <p class="section-desc">Our lab focuses on sustainable agricultural systems through interdisciplinary research.</p>
-    </header>
+<section class="centre-section" markdown="0">
+  <div class="container prose-block">
+    <h2>Overview</h2>
+    {% for paragraph in site.lab.overview.intro %}
+    <p>{{ paragraph }}</p>
+    {% endfor %}
+  </div>
+</section>
 
-    <div class="research-grid">
-      {% for project in site.research limit:3 %}
-      <article class="research-card">
-        <div class="research-icon">{{ project.icon | default: "🔬" }}</div>
-        <h3 class="research-title">{{ project.title }}</h3>
-        <p class="research-excerpt">{{ project.excerpt | strip_html | truncatewords: 20 }}</p>
-        <a href="{{ project.url | relative_url }}" class="research-link">Learn more →</a>
+<section class="centre-section centre-section-alt" markdown="0">
+  <div class="container two-column-grid">
+    <div class="info-panel">
+      <h2>Main Objectives</h2>
+      <ul class="plain-list">
+        {% for item in site.lab.overview.objectives %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="info-panel">
+      <h2>Main Research Activities</h2>
+      <ul class="plain-list">
+        {% for item in site.lab.overview.activities %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="centre-section" markdown="0">
+  <div class="container prose-block">
+    <h2>Research Areas</h2>
+    <div class="editorial-sections">
+      {% for area in site.lab.activity_sections %}
+      <article class="editorial-item">
+        <h3>{{ area.title }}</h3>
+        {% for paragraph in area.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
       </article>
       {% endfor %}
     </div>
-
-    <div class="section-cta">
-      <a href="{{ '/research/' | relative_url }}" class="btn btn-outline">View All Research</a>
-    </div>
   </div>
 </section>
 
-<!-- Stats Section -->
-<section class="section section-stats" markdown="0">
+<section class="centre-section centre-section-alt" markdown="0">
   <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <span class="stat-number">{{ "now" | date: "%Y" | minus: site.lab.founded }}</span>
-        <span class="stat-label">Years Active</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">{{ site.people | size }}</span>
-        <span class="stat-label">Team Members</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">{{ site.publications | size }}</span>
-        <span class="stat-label">Publications</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">12</span>
-        <span class="stat-label">Active Projects</span>
-      </div>
-    </div>
+    <h2>Research Projects</h2>
+    <ul class="project-list">
+      {% for item in site.lab.projects %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
   </div>
 </section>
 
-<!-- Team Preview -->
-<section class="section section-team" markdown="0">
+<section class="centre-section" markdown="0">
   <div class="container">
-    <header class="section-header">
-      <span class="section-tag">Our Team</span>
-      <h2 class="section-title">Meet the Researchers</h2>
-      <p class="section-desc">A diverse group of scientists, engineers, and thinkers.</p>
-    </header>
-
-    <div class="team-grid">
-      {% assign leaders = site.people | where: "role", "PI" %}
-      {% for person in leaders limit:2 %}
-      <article class="team-card team-card-featured">
-        <div class="team-photo">
-          {% if person.photo and person.photo != "" %}
-          <img src="{{ person.photo | relative_url }}" alt="{{ person.name }}">
-          {% else %}
-          <div class="team-photo-placeholder">{{ person.name | slice: 0 }}</div>
-          {% endif %}
-        </div>
-        <div class="team-info">
-          <h3 class="team-name">{{ person.name }}</h3>
-          <p class="team-role">{{ person.position }}</p>
-          <p class="team-bio">{{ person.content | strip_html | truncatewords: 15 }}</p>
-          <a href="{{ person.url | relative_url }}" class="team-link">View Profile →</a>
-        </div>
-      </article>
+    <h2>People</h2>
+    <p class="section-intro">Head of Research Centre: {{ site.lab.head }}</p>
+    <div class="name-grid">
+      {% for person in site.lab.people.staff %}
+      <div class="name-chip">{{ person }}</div>
       {% endfor %}
     </div>
+  </div>
+</section>
 
-    <div class="section-cta">
-      <a href="{{ '/people/' | relative_url }}" class="btn btn-outline">Meet the Full Team</a>
+<section class="centre-section centre-section-alt" markdown="0">
+  <div class="container two-column-grid">
+    <div class="info-panel">
+      <h2>National Collaborations</h2>
+      <ul class="plain-list">
+        {% for item in site.lab.collaborations.national %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="info-panel">
+      <h2>International Collaborations</h2>
+      <ul class="plain-list">
+        {% for item in site.lab.collaborations.international %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- Latest News -->
-<section class="section section-news" markdown="0">
-  <div class="container">
-    <header class="section-header">
-      <span class="section-tag">Latest Updates</span>
-      <h2 class="section-title">News & Events</h2>
-    </header>
-
-    <div class="news-list">
-      {% for post in site.news limit:3 %}
-      <article class="news-item">
-        <time class="news-date" datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: "%b %d, %Y" }}
-        </time>
-        <div class="news-content">
-          <h3 class="news-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p class="news-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-        </div>
-      </article>
-      {% endfor %}
+<section class="centre-section" markdown="0">
+  <div class="container two-column-grid">
+    <div class="info-panel">
+      <h2>Publications</h2>
+      <ul class="link-list">
+        {% for item in site.lab.publications %}
+        <li><a href="{{ item.url }}" target="_blank" rel="noreferrer">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
     </div>
-
-    <div class="section-cta">
-      <a href="{{ '/news/' | relative_url }}" class="btn btn-outline">All News</a>
-    </div>
-  </div>
-</section>
-
-<!-- Contact CTA -->
-<section class="section section-cta" markdown="0">
-  <div class="container">
-    <div class="cta-box">
-      <h2 class="cta-title">Interested in Collaboration?</h2>
-      <p class="cta-text">We're always looking for passionate researchers, students, and partners to join our mission.</p>
-      <div class="cta-actions">
-        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary">Contact Us</a>
-        <a href="mailto:{{ site.contact.email }}" class="btn btn-ghost">{{ site.contact.email }}</a>
-      </div>
+    <div class="info-panel">
+      <h2>Contact</h2>
+      <p><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+      <p>{{ site.contact.phone }}</p>
+      <p>{{ site.contact.fax }}</p>
+      <p>{{ site.contact.address | newline_to_br }}</p>
+      <p><a href="{{ site.contact.map_link }}" target="_blank" rel="noreferrer">Open map</a></p>
     </div>
   </div>
 </section>
