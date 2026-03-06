@@ -58,6 +58,10 @@ permalink: /people/
 
 <div class="prose-block">
   <h2>PhD Students</h2>
+  <p>
+    Several members are part of the
+    <a href="https://www.phd-sdc.it/" target="_blank" rel="noreferrer">National PhD in Sustainable Development and Climate Change (PhD SDC)</a>.
+  </p>
   <div class="people-directory">
     {% assign phd_students = site.people | where: "group", "PhD Student" | sort: "sort_order" %}
     {% for person in phd_students %}
@@ -74,9 +78,14 @@ permalink: /people/
 
 <div class="prose-block">
   <h2>Former Members</h2>
-  <ul class="plain-list">
+  <ul class="plain-list former-list">
     {% for person in site.lab.people.former_members %}
-    <li>{{ person }}</li>
+    <li>
+      <span>{{ person.name }}</span>
+      {% if person.orcid and person.orcid != "" %}
+      <a href="{{ person.orcid }}" target="_blank" rel="noreferrer" class="former-link">ORCID</a>
+      {% endif %}
+    </li>
     {% endfor %}
   </ul>
 </div>

@@ -66,10 +66,18 @@ lab:
     - "ANTICIPATE (COST Action)"
   people:
     former_members:
-      - "Dr. Muhammad Nasir Imam"
-      - "Dr. Marco Chericoni"
-      - "Dr. Laura T. Massano"
-      - "Dott.ssa Modica Scala Angela"
+      - name: "Dr. Muhammad Nasir Imam"
+        orcid: ""
+      - name: "Dr. Marco Chericoni"
+        orcid: ""
+      - name: "Dott.ssa Laura T. Massano"
+        orcid: ""
+      - name: "Dott.ssa Modica Scala Angela"
+        orcid: ""
+      - name: "Dr. Naveen Ragu Ramalingam"
+        orcid: ""
+      - name: "Dott.ssa Franza Teresa"
+        orcid: ""
   collaborations:
     national:
       - "ENEA"
@@ -104,7 +112,8 @@ lab:
       url: "https://research.iusspavia.it/cris/rp/rp05272"
 
 contact:
-  email: "marco.gaetani@iusspavia.it"
+  email: "carisma@iusspavia.it"
+  secondary_email: "marco.gaetani@iusspavia.it"
   phone: "Tel: +39 0382 375811"
   fax: "Fax: +39 0382 375899"
   address: |

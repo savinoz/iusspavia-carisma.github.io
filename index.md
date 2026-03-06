@@ -10,24 +10,9 @@ title: CARISMA
       <h1 class="centre-title">{{ site.lab.full_name }}</h1>
       <p class="centre-acronym">{{ site.lab.name }}</p>
       <p class="centre-summary">{{ site.lab.tagline }}</p>
-      <dl class="centre-meta">
-        <div class="centre-meta-item">
-          <dt>Head</dt>
-          <dd>{{ site.lab.head }}</dd>
-        </div>
-        <div class="centre-meta-item">
-          <dt>Institution</dt>
-          <dd>{{ site.lab.university }}</dd>
-        </div>
-        <div class="centre-meta-item">
-          <dt>Contact</dt>
-          <dd><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></dd>
-        </div>
-        <div class="centre-meta-item">
-          <dt>Phone</dt>
-          <dd>{{ site.contact.phone }}</dd>
-        </div>
-      </dl>
+      <p class="centre-affiliation">
+        Part of <a href="https://www.iusspavia.it/en" target="_blank" rel="noreferrer">IUSS Pavia</a>.
+      </p>
       <figure class="centre-image-frame">
         <img src="{{ '/assets/img/grp.png' | relative_url }}" alt="CARISMA group" class="centre-image">
       </figure>
@@ -84,6 +69,7 @@ title: CARISMA
     <div class="info-panel">
       <h2>Contact</h2>
       <p><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+      <p><a href="mailto:{{ site.contact.secondary_email }}">{{ site.contact.secondary_email }}</a></p>
       <p>{{ site.contact.phone }}</p>
       <p>{{ site.contact.fax }}</p>
       <p>{{ site.contact.address | newline_to_br }}</p>
