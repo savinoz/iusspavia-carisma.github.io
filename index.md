@@ -9,7 +9,29 @@ title: Home
     <span class="hero-tag">{{ site.lab.department }}</span>
     <h1 class="hero-title">{{ site.lab.name }}</h1>
     <p class="hero-subtitle">{{ site.lab.tagline }}</p>
-    <p class="hero-description">{{ site.description }}</p>
+    <div class="hero-description">
+      {% for paragraph in site.lab.overview.intro %}
+      <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+    <div class="hero-highlights">
+      <div class="hero-panel">
+        <h2 class="hero-panel-title">Main Objectives</h2>
+        <ul class="hero-list">
+          {% for item in site.lab.overview.objectives %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="hero-panel">
+        <h2 class="hero-panel-title">Main Research Activities</h2>
+        <ul class="hero-list">
+          {% for item in site.lab.overview.activities %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
     <div class="hero-actions">
       <a href="{{ '/research/' | relative_url }}" class="btn btn-primary">Explore Our Research</a>
       <a href="{{ '/contact/' | relative_url }}" class="btn btn-secondary">Get in Touch</a>

@@ -5,7 +5,7 @@
 
 # Site Settings
 name: "AgroSystems Lab"
-description: "Exploring sustainable agriculture through systems thinking and innovative research"
+description: "CARISMA Centre coordinates climate change and sustainable development research at IUSS."
 url: "https://iusspavia-carisma.github.io"
 baseurl: "/lab-website"
 
@@ -17,6 +17,20 @@ lab:
   university: "Scuola Universitaria Superiore Pavia"
   location: "Pavia, Italy"
   founded: 2008
+  overview:
+    intro:
+      - "The CARISMA Centre responds to the need for coordination of the numerous disciplinary profiles present in the IUSS that relate to the issues of climate change and sustainable development."
+      - "CARISMA is the IUSS reference centre for the National PhD on Sustainable Development and Climate Change."
+    objectives:
+      - "Data analysis and modelling of the processes of the Earth system and the economic system."
+      - "Assessment of the impact on the environment and humans of extreme natural events and human activities, with particular reference to climate change."
+      - "Assessment and management of impact-associated risk."
+      - "Formulation and proposal of new economic, political and legal models of sustainable development."
+    activities:
+      - "Evaluation of possible climate evolution and the effects of climate change and climate variability on the environment, on humans and social organizations, in support of sustainable development."
+      - "Integration of climate change in risk analysis and management through the use of data and climate modelling."
+      - "Development of integrated methodologies to support the overall analysis of the risk associated with complex phenomena of natural and technological origin, including multi-hazard risk assessment."
+      - "Improvement of Earth system modelling, including its interactions with social and socio-economic dynamics, to support integrated and cost-effective risk management and decision-making."
 
 contact:
   email: "marco.gaetani@iusspavia.it; carisma@iusspavia.it"
