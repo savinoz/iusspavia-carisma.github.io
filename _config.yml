@@ -6,8 +6,8 @@
 # Site Settings
 name: "AgroSystems Lab"
 description: "Exploring sustainable agriculture through systems thinking and innovative research"
-url: "https://your-lab.github.io"
-baseurl: ""
+url: "https://iusspavia-carisma.github.io"
+baseurl: "/lab-website"
 
 # Lab Information
 lab:
