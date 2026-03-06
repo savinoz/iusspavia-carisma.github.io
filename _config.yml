@@ -5,7 +5,27 @@
 
 # Site Settings
 name: "AgroSystems Lab"
+<<<<<<< HEAD
 description: "CARISMA Centre coordinates climate change and sustainable development research at IUSS."
+=======
+description: |
+  The CARISMA Centre responds to the need for coordination of the numerous disciplinary profiles present in the IUSS that relate to the issues of climate change and sustainable development.
+
+  CARISMA proposes is the referent at IUSS for the National PhD on Sustainable Development and Climate Change.
+
+  The main objectives of the research activity are:
+
+  Data analysis and modelling of the processes of the Earth system and the economic system.
+  The assessment of the impact on the environment and humans of extreme natural events and human activities, with particular reference to climate change.
+  The assessment and management of impact associated risk.
+  The formulation and proposal of new economic, political and legal models of sustainable development.
+  The main research activities are:
+
+  Evaluation of possible climate evolution and the effects of climate change and climate variability on the environment, on humans and social organizations, in support of sustainable development.
+  Integration of climate change in risk analysis and management, through the use of data and climate modelling.
+  Development of integrated methodologies to support the overall analysis of the risk associated with complex phenomena of natural and technological origin also in combination (multi-hazard risk assessment).
+  Improvement of Earth system modelling, including its interactions with social and socio-economic dynamics in order to support decision-making for integrated and cost-effective risk management in support of sustainable development.
+>>>>>>> origin/main
 url: "https://iusspavia-carisma.github.io"
 baseurl: "/lab-website"
 
