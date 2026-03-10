@@ -896,6 +896,119 @@ img {
   border-radius: var(--radius-md);
 }
 
+/* Hero Slider */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  max-height: 70vh;
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  max-height: 600px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: var(--spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.slide-caption p {
+  color: var(--color-dark);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.slider-indicators {
+  position: absolute;
+  bottom: var(--spacing-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--spacing-sm);
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--color-dark);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicator:hover {
+  background: var(--color-muted);
+}
+
+.indicator.active {
+  background: var(--color-dark);
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-dark);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-sm);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.slider-arrow:hover {
+  background: var(--color-dark);
+  color: #ffffff;
+}
+
+.slider-prev {
+  left: var(--spacing-md);
+  border-radius: var(--radius-sm);
+}
+
+.slider-next {
+  right: var(--spacing-md);
+  border-radius: var(--radius-sm);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
@@ -939,5 +1052,24 @@ img {
 
   .project-list {
     columns: 1;
+  }
+
+  .slider-container {
+    height: 50vh;
+    max-height: 400px;
+  }
+
+  .slide-caption {
+    padding: var(--spacing-md);
+    padding-top: var(--spacing-lg);
+  }
+
+  .slide-caption p {
+    font-size: 0.95rem;
+  }
+
+  .slider-arrow {
+    padding: var(--spacing-sm);
+    font-size: 1.2rem;
   }
 }

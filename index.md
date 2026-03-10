@@ -3,6 +3,8 @@ layout: default
 title: CARISMA
 ---
 
+{% include hero-slider.html %}
+
 <section class="centre-hero" markdown="0">
   <div class="container centre-hero-shell">
     <div class="centre-hero-main">

@@ -9,6 +9,18 @@ description: "Climate change impact studies for risk management at IUSS Pavia."
 url: "https://iusspavia-carisma.github.io"
 baseurl: "/lab-website" # to be changed if the site is hosted in the main directory ""
 
+# Hero Slider (homepage)
+hero_slider:
+  auto_rotate: true
+  interval: 5000  # milliseconds
+  slides:
+    - image: "/assets/img/slider/carisma_at_egu25.jpeg"
+      caption: "CARISMA team attending the EGU General Assembly 2025 in Vienna"
+    - image: "/assets/img/slider/carisma_at_angela.jpeg"
+      caption: "CARISMA team celebrating Angela Modica Scala PhD Defence"
+    - image: "/assets/img/slider/carisma_and_bike.jpeg"
+      caption: "CARISMA team celebrating the finding of Alessandro Caiani bike"
+
 # Lab Information
 lab:
   name: "CARISMA"
@@ -21,8 +33,7 @@ lab:
   head: "Prof. Marco Gaetani"
   overview:
     intro:
-      - "The CARISMA Centre responds to the need for coordination of the numerous disciplinary profiles present in the IUSS that relate to the issues of climate change and sustainable development."
-      - "CARISMA is the IUSS reference centre for the National PhD on Sustainable Development and Climate Change."
+      - "Driven by curiosity and societal need, CARISMA brings together an interdisciplinary team of researchers — spanning climate modelling, hydrology, remote sensing, atmospheric physics, environmental engineering, and economics — to advance integrated research on climate change and sustainable development."
     objectives:
       - "Data analysis and modelling of the processes of the Earth system and the economic system."
       - "Assessment of the impact on the environment and humans of extreme natural events and human activities, with particular reference to climate change."

@@ -1,0 +1,98 @@
+<section class="hero-slider" aria-label="Image slideshow">
+  <div class="slider-container">
+    {% for slide in site.hero_slider.slides %}
+    <div class="slide {% if forloop.first %}active{% endif %}" data-index="{{ forloop.index0 }}">
+      <img src="{{ slide.image | relative_url }}" alt="{{ slide.caption }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+      <div class="slide-caption">
+        <p>{{ slide.caption }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="slider-indicators">
+    {% for slide in site.hero_slider.slides %}
+    <button class="indicator {% if forloop.first %}active{% endif %}"
+            data-index="{{ forloop.index0 }}"
+            aria-label="Go to slide {{ forloop.index }}"></button>
+    {% endfor %}
+  </div>
+
+  <button class="slider-arrow slider-prev" aria-label="Previous slide">&#10094;</button>
+  <button class="slider-arrow slider-next" aria-label="Next slide">&#10095;</button>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.hero-slider');
+  if (!slider) return;
+
+  const slides = slider.querySelectorAll('.slide');
+  const indicators = slider.querySelectorAll('.indicator');
+  const prevBtn = slider.querySelector('.slider-prev');
+  const nextBtn = slider.querySelector('.slider-next');
+
+  let currentIndex = 0;
+  let autoRotate = {{ site.hero_slider.auto_rotate | default: true }};
+  let interval = {{ site.hero_slider.interval | default: 5000 }};
+  let autoRotateTimer;
+
+  function showSlide(index) {
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+
+    slides.forEach(s => s.classList.remove('active'));
+    indicators.forEach(i => i.classList.remove('active'));
+
+    slides[index].classList.add('active');
+    indicators[index].classList.add('active');
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function startAutoRotate() {
+    if (autoRotate) {
+      autoRotateTimer = setInterval(nextSlide, interval);
+    }
+  }
+
+  function stopAutoRotate() {
+    clearInterval(autoRotateTimer);
+  }
+
+  // Event listeners
+  prevBtn.addEventListener('click', function() {
+    prevSlide();
+    stopAutoRotate();
+    startAutoRotate();
+  });
+
+  nextBtn.addEventListener('click', function() {
+    nextSlide();
+    stopAutoRotate();
+    startAutoRotate();
+  });
+
+  indicators.forEach(function(indicator) {
+    indicator.addEventListener('click', function() {
+      showSlide(parseInt(this.dataset.index));
+      stopAutoRotate();
+      startAutoRotate();
+    });
+  });
+
+  // Pause on hover
+  slider.addEventListener('mouseenter', stopAutoRotate);
+  slider.addEventListener('mouseleave', startAutoRotate);
+
+  // Start auto-rotation
+  startAutoRotate();
+});
+</script>
