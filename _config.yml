@@ -7,7 +7,7 @@
 name: "CARISMA Centre"
 description: "Climate change impact studies for risk management at IUSS Pavia."
 url: "https://iusspavia-carisma.github.io"
-baseurl: "/lab-website"
+baseurl: ""
 
 # Lab Information
 lab:
