@@ -6,7 +6,6 @@ title: CARISMA
 <section class="centre-hero" markdown="0">
   <div class="container centre-hero-shell">
     <div class="centre-hero-main">
-      <p class="centre-kicker">Research Centre</p>
       <h1 class="centre-title">{{ site.lab.full_name }}</h1>
       <p class="centre-acronym">{{ site.lab.name }}</p>
       <p class="centre-summary">{{ site.lab.tagline }}</p>
