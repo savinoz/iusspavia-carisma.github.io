@@ -18,11 +18,11 @@ hero_slider:
   interval: 20000  # milliseconds (20 seconds)
   slides:
     - image: "/assets/img/slider/carisma_at_egu25.jpeg"
-      caption: "CARISMA team attending the EGU General Assembly 2025 in Vienna"
+      caption: "CARISMA team members attending the EGU General Assembly 2025 in Vienna"
     - image: "/assets/img/slider/carisma_at_angela.jpeg"
-      caption: "CARISMA team celebrating Angela PhD Defence"
+      caption: "CARISMA team members celebrating Angela PhD Defence"
     - image: "/assets/img/slider/carisma_and_bike.jpeg"
-      caption: "CARISMA team celebrating the finding of Alessandro bike"
+      caption: "CARISMA team members celebrating the finding of Alessandro bike"
 
 # Lab Information
 lab:
