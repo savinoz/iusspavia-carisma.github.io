@@ -27,7 +27,7 @@ permalink: /about/
     </div>
   </div>
   <figure class="history-image-featured history-image-card">
-    <img src="{{ '/assets/img/carisma_2026.jpg' | relative_url }}" alt="CARISMA team 2026">
+    <img src="{{ '/assets/img/carisma_2026.png' | relative_url }}" alt="CARISMA team 2026">
     <figcaption>CARISMA team - 2026</figcaption>
   </figure>
 </div>
