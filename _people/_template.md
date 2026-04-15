@@ -8,8 +8,6 @@
 name: "First Last, PhD"                  # Full name with title (e.g., "John Smith, MSc" or "Jane Doe, PhD")
 slug: "firstname-lastname"               # URL-friendly name (lowercase, hyphens, no spaces)
 position: "PhD Student"                  # Display position (e.g., "PhD Student", "Postdoctoral Researcher", "Associate Professor")
-role: "PhD Student"                      # Role category for filtering
-group: "PhD Student"                     # Group for sorting (e.g., "Head of Centre", "Associate Professor", "PhD Student")
 
 # PhD specific (only for PhD students)
 phd_program: "PhD SDC - Sustainable Development and Climate Change"
