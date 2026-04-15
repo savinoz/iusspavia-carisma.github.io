@@ -42,8 +42,10 @@ Overall, these experiments highlight the critical role of vegetation and LULCCs 
 <div class="event-info">
 <p><strong>Date:</strong> 9 April 2026, 15.00</p>
 <p><strong>Location:</strong> Sala del Camino, Palazzo Broletto, Piazza della Vittoria 15, Pavia</p>
-<p><strong>Online:</strong> Available</p>
+<p><strong>Online:</strong> <a href="http://iusspavia.zoom.us/my/br.saladelcamino">Join via Zoom</a></p>
+<p><strong>Introduced by:</strong> Marco Gaetani, IUSS Pavia</p>
 </div>
+
 
 <br>
 
